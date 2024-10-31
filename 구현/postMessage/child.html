@@ -1,0 +1,23 @@
+<!-- child.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Page</title>
+</head>
+<body>
+<h1>자식 페이지</h1>
+
+<!-- 부모 페이지로 메시지 전송 버튼 -->
+<button id="sendMessageButton">부모 페이지로 메시지 보내기</button>
+
+<script>
+    document.getElementById("sendMessageButton").addEventListener("click", () => {
+        // 부모 페이지에 메시지 보내기
+        const message = "Hello from Child!";
+        window.parent.postMessage(message, "*");
+    });
+</script>
+</body>
+</html>
